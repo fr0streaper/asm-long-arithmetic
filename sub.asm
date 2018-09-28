@@ -34,9 +34,9 @@ sub_long_long:
 
 .loop:
                 mov             rax, [rsi]
+		lea             rsi, [rsi + 8]
                 sbb             [rdi], rax
-                add             rsi, 8
-                add             rdi, 8
+                lea             rdi, [rdi + 8]
                 dec             rcx
                 jnz             .loop
 

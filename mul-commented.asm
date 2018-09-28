@@ -82,7 +82,7 @@ mul_long_long:
                                 mov             rax, [rsi]
                                 ; multiply current qwords in numbers #1 and #2
                                 mul             qword [rdi]
-                                ; add carry to rax 
+                                ; add carry from previous iteration to rax 
                                 add             rax, rbx
                                 ; add carry to high part
                                 adc             rdx, 0
